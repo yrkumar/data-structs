@@ -37,3 +37,4 @@ int main() {
 	assert(test_quicksort);
 	assert(test_mergesort);
 }
+

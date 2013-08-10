@@ -38,5 +38,7 @@ elem pop(stack S) {
 void print_stack(stack S) {
 }
 
-
+int main() {
+	
+}
 
