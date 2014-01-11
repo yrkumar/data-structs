@@ -4,15 +4,26 @@
 #include <assert.h>
 #include <string.h>
 
-// checks if an array is sorted
+/*
+ * is_sorted - checks whether A is sorted between lower and upper
+ * REQUIRES: [lower, upper) is in bounds of A 
+ * ENSURES: is_sorted returns true if A is sorted in increasing order
+ *			within [lower, upper) and false otherwise
+ */
 bool is_sorted(int* A, int lower, int upper) {
 	for (int i = lower + 1; i < upper; i++) {
-		if (A[i] < A[i-1]) return false;
+		if (A[i-1] > A[i]) return false;
 	}
 	return true;
 }
 
-// linsearch on potentially unsorted array from [lower, upper)
+/*
+ * is_in - linear search on potentially unsorted array between lower and upper
+ * REQUIRES: [lower, upper) is in bounds of A
+ * ENSURES: is_in returns the index of the first occurrence of x within 
+ *			[lower, upper) of A or -1 if x does not occur in A within [lower, 
+ * 			upper)
+ */
 int is_in(int x, int* A, int lower, int upper) {
 	for (int i = lower; i < upper; i++) {
 		if (A[i] == x) return i;
@@ -20,7 +31,13 @@ int is_in(int x, int* A, int lower, int upper) {
 	return -1;
 }
 
-// linsearch on sorted array from [lower, upper)
+/*
+ * linsearch - linear search on sorted array from between lower and upper
+ * REQUIRES: [lower, upper) is in bounds of A
+ * ENSURES: linsearch returns the index of the first occurrence of x within
+ *			[lower, upper) of A or -1 if x does not occur in A within [lower, 
+ * 			upper)
+ */
 int linsearch(int x, int* A, int lower, int upper) {
 	for (int i = lower; i < upper; i++) {
 		if (A[i] == x) return i;
@@ -29,52 +46,20 @@ int linsearch(int x, int* A, int lower, int upper) {
 	return -1;
 }
 
-// binsearch on sorted array from [lower, upper)
+/*
+ * binsearch - binary search on sorted array from [lower, upper)
+ * REQUIRES: lower and upper are in bounds of A and is_sorted(A) == true
+ * ENSURES: binsearch returns the index of the first occurrence of x within
+ *			[lower, upper) of A or -1 if x does not occur in A within [lower, 
+ * 			upper)
+ */
 int binsearch(int x, int* A, int lower, int upper) {
 	while (lower < upper) {
-		int mid = lower + (upper - lower)/2
+		int mid = lower + (upper - lower)/2;
 		if (A[mid] == x) return mid;
-		else if (A[mid] > x) upper = mid;
-		else lower = mid + 1;
+		else if (A[mid] < x) lower = mid + 1;
+		else upper = mid;
 	}
 	return -1;
-}
-
-bool test_is_sorted(int* A) {
-	assert(is_sorted(A, 0, 1));
-	assert(is_sorted(A, 0, 5));
-	return true;
-}
-
-bool test_is_in(int* A) {
-	assert(is_in(2, A, 0, 5) == 2);
-	assert(is_in(0, A, 1, 5) == -1);
-	return true;	
-}
-
-bool test_linsearch(int* A) {
-	assert(linsearch(1, A, 0, 5) == 1);
-	assert(linsearch(5, A, 0, 5) == -1);
-	return true;	
-}
-
-bool test_binsearch(int* A) {
-	assert(binsearch(4, A, 0, 5) == 4);
-	assert(binsearch(5, A, 0, 5) == -1);
-	return true;
-}
-
-int main() {
-	int* A = calloc(5, sizeof(int));
-	for (int i = 0; i < 5; i++) {
-		A[i] = i;
-	}
-	// unit tests
-	assert(test_is_sorted(A));
-	assert(test_is_in(A));
-	assert(test_linsearch(A));
-	assert(test_binsearch(A));
-	free(A);
-	return 0;
 }
 

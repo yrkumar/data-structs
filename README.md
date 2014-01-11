@@ -4,7 +4,7 @@ data-structs
 A collection of data structures and algorithms implemented in C, complete with unit tests and code contracts for correctness, as well as a Makefile for easy compilation.
 
 Included Data Structures/Algorithms
--------------------------------------------
+------------------------------------
 1. Searching Algorithms 
 2. Sorting Algorithms *
 3. Linked Lists *
@@ -32,9 +32,11 @@ $ echo "#include <necessaryStruct.h>" >> projFile.c
 To-Do Checklist
 ---------------
 
-- add code contracts to what's done so far
+- change Makefile
 - finish the rest of the data structures/algorithms with code contracts and unit tests
-- add header files for all of the library files
+- add header files
+- add code contracts
+- add nice printing UI functionality (i.e. for arrays and such)
 
 About
 -----
