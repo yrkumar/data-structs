@@ -141,6 +141,7 @@ int main() {
 	assert(test_linkedlist());
 	printf("All linkedlist.c tests passed!\n\n");
 
+	printf("Done! All tests passed!\n");
 	return 0;
 }
 

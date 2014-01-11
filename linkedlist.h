@@ -16,6 +16,7 @@ struct list_node {
 
 typedef struct linkedlist_header* lin_list;
 typedef struct list_node* node; 
+typedef int elem;
 
 /*
  * linlist_new - creates a new linked list
@@ -41,16 +42,16 @@ bool is_empty(lin_list L);
 /* 
  * append - appends an element to a linked list
  * REQUIRES: true
- * ENSURES: append(i, L) adds i after the tail of L
+ * ENSURES: append(e, L) adds e after the tail of L
  */
-void append(int i, lin_list L);
+void append(elem e, lin_list L);
 
 /*
  * prepend - prepends an element to a linked list 
  * REQUIRES: true
- * ENSURES: prepend(i, L) adds i before the head of L
+ * ENSURES: prepend(e, L) adds e before the head of L
  */
-void prepend(int i, lin_list L);
+void prepend(elem e, lin_list L);
 
 /*
  * linlist_print - prints elements of linked list in order

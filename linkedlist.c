@@ -45,10 +45,10 @@ bool is_empty(lin_list L) {
 /* 
  * append - appends an element to a linked list
  * REQUIRES: true
- * ENSURES: append(i, L) adds i after the tail of L
+ * ENSURES: append(e, L) adds e after the tail of L
  */
-void append(int i, lin_list L) {
-	L->tail->data = i;
+void append(elem e, lin_list L) {
+	L->tail->data = e;
 	node p = calloc(sizeof(struct list_node), 1);
 	p->next = NULL;
 	L->tail->next = p;
@@ -58,11 +58,11 @@ void append(int i, lin_list L) {
 /*
  * prepend - prepends an element to a linked list 
  * REQUIRES: true
- * ENSURES: prepend(i, L) adds i before the head of L
+ * ENSURES: prepend(e, L) adds e before the head of L
  */
-void prepend(int i, lin_list L) {
+void prepend(elem e, lin_list L) {
 	node p = calloc(sizeof(struct list_node), 1);
-	p->data = i;
+	p->data = e;
 	p->next = L->head;
 	L->head = p;
 }

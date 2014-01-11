@@ -6,11 +6,11 @@ A collection of data structures and algorithms implemented in C, complete with u
 Included Data Structures/Algorithms
 ------------------------------------
 1. Searching Algorithms 
-2. Sorting Algorithms *
-3. Linked Lists *
-4. Doubly Linked Lists *
-5. Stacks * 
-6. Queues *
+2. Sorting Algorithms 
+3. Linked Lists 
+4. Stacks * 
+5. Queues *
+6. Doubly Linked Lists *
 7. Unbounded Arrays * 
 8. Hash Tables *
 9. Binary Search Trees *
@@ -22,20 +22,18 @@ Included Data Structures/Algorithms
 Usage
 -----
 
-Clone the git repo into your project directory and include the necessary header file(s) in your project
+Clone the git repo into your project directory.
 ```bash
 $ cd yourProject/
 $ git clone git@github.com:yrkumar/data-structs.git lib/
-$ echo "#include <necessaryStruct.h>" >> projFile.c
 ```
+Then, include the necessary header file(s) in your project. Make sure to compile your project with the .c file that corresponds to the data structure/algorithm set that is needed.
 
 To-Do Checklist
 ---------------
 
 - change Makefile
-- finish the rest of the data structures/algorithms with code contracts and unit tests
-- add header files
-- add code contracts
+- finish the rest of the data structures/algorithms with code contracts, header files, and unit tests
 - add nice printing UI functionality (i.e. for arrays and such)
 
 About
