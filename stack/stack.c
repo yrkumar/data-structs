@@ -54,7 +54,7 @@ void reverse(stack S) {
 	while (!(is_empty(S))) {
 		push(pop(S), R);
 	}
-	S = R;
+	*S = *R;
 }
 
 /*

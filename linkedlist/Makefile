@@ -11,11 +11,11 @@ CC = gcc
 #  -pedantic	issue all warnings 
 CFLAGS  = -DDEBUG -Wall -Wextra -Werror -std=c99 -pedantic 
 
-all: $(TARGET)
+SRC = $(wildcard *.c)
 
-$(TARGET): $(TARGET).c
-	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
+test: $(SRC)
+	$(CC) $(CFLAGS) -o $@ $^
 
 clean:
-	$(RM) $(TARGET)
+	$(RM) test
 

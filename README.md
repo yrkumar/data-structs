@@ -8,8 +8,8 @@ Included Data Structures/Algorithms
 1. Searching Algorithms 
 2. Sorting Algorithms 
 3. Linked Lists 
-4. Stacks * 
-5. Queues *
+4. Stacks  
+5. Queues 
 6. Doubly Linked Lists *
 7. Unbounded Arrays * 
 8. Hash Tables *
@@ -32,7 +32,7 @@ Then, include the necessary header file(s) in your project. Make sure to compile
 To-Do Checklist
 ---------------
 
-- change Makefile
+- test each individual function 
 - finish the rest of the data structures/algorithms with code contracts, header files, and unit tests
 - add nice printing UI functionality (i.e. for arrays and such)
 
