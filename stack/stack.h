@@ -16,16 +16,16 @@ typedef int s_elem;
 stack stack_new();
 
 /*
- * pop - pops an element off of a stack
- * REQUIRES: S is nonempty
- * ENSURES: pop(S) returns the element at the top of S
+ * push - pushes an element onto a stack
+ * REQUIRES: true
+ * ENSURES: push(e, S) adds e on top of S
  */
 void push(s_elem e, stack S);
 
-/* 
- * reverse - reverses a stack 
- * REQUIRES: true
- * ENSURES: reverse(S) flips the order of the elements in S
+/*
+ * pop - pops an element off of a stack
+ * REQUIRES: S is nonempty
+ * ENSURES: pop(S) returns the element at the top of S
  */
 s_elem pop(stack S);
 

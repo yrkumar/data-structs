@@ -26,9 +26,14 @@ bool test_stack() {
 }
 
 int main() {
-	/* TEST FOR STACK.C */
+	/* TESTS FOR STACK.C */
 	printf("Testing stack.c functions...\n");
-	printf("	all\n");
+	printf("	stack_new\n");
+	printf("	push\n");
+	printf("	pop\n");
+	printf("	peek\n");
+	printf("	reverse\n");
 	assert(test_stack());
-	printf("All stack.c tests passed!\n\n");	
+	printf("All stack.c tests passed!\n");	
+	printf("(* Note: all functions tested together, not individually *)\n\n");
 }

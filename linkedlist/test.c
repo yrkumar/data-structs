@@ -8,7 +8,7 @@
 /* TESTS FOR LINKEDLIST.C */
 bool test_linkedlist() {
 	lin_list L = linlist_new();
-	assert(is_empty(L) && is_complete(L));
+	assert(is_complete(L) && is_empty(L));
 	append(2, L);
 	assert(L->head->data == 2);
 	assert(!is_empty(L) && is_complete(L));
@@ -21,7 +21,12 @@ bool test_linkedlist() {
 int main() {
 	/* TESTS FOR LINKEDLIST.C */
 	printf("Testing linkedlist.c functions...\n");
-	printf("	all\n");
+	printf("	linlist_new\n");
+	printf("	is_complete\n");
+	printf("	is_empty\n");
+	printf("	append\n");
+	printf("	prepend\n");
 	assert(test_linkedlist());
-	printf("All linkedlist.c tests passed!\n\n");
+	printf("All linkedlist.c tests passed!\n");
+	printf("(* Note: all functions tested together, not individually *)\n\n");
 }

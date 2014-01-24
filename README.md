@@ -32,7 +32,7 @@ Then, include the necessary header file(s) in your project. Make sure to compile
 To-Do Checklist
 ---------------
 
-- test each individual function 
+- add dependencies to each file
 - finish the rest of the data structures/algorithms with code contracts, header files, and unit tests
 - add nice printing UI functionality (i.e. for arrays and such)
 
